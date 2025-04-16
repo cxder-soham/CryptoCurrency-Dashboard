@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 50% 10%;
+    --foreground: 210 20% 98%;
+
+    --card: 210 40% 12%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 210 40% 12%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 172 80% 40%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 217 100% 50%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 210 40% 20%;
+    --muted-foreground: 210 20% 80%;
+
+    --accent: 35 90% 55%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 210 40% 20%;
+    --input: 210 40% 20%;
+    --ring: 172 80% 40%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 210 50% 8%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 172 80% 40%;
+    --sidebar-primary-foreground: 210 20% 98%;
+    --sidebar-accent: 35 90% 55%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 210 40% 20%;
+    --sidebar-ring: 172 80% 40%;
+  }
+
+  .dark {
+    --background: 210 50% 10%;
+    --foreground: 210 20% 98%;
+
+    --card: 210 40% 12%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 210 40% 12%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 172 80% 40%;
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 217 100% 50%;
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 210 40% 20%;
+    --muted-foreground: 210 20% 80%;
+
+    --accent: 35 90% 55%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 210 40% 20%;
+    --input: 210 40% 20%;
+    --ring: 172 80% 40%;
+    
+    --sidebar-background: 210 50% 8%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 172 80% 40%;
+    --sidebar-primary-foreground: 210 20% 98%;
+    --sidebar-accent: 35 90% 55%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 210 40% 20%;
+    --sidebar-ring: 172 80% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--accent));
+}
+
+/* Crypto-specific animations */
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.crypto-pulse {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
